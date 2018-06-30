@@ -1,12 +1,10 @@
-### bitcoin scripting
-
-... intro? 
+### bitcoin scripting 
 
 https://en.bitcoin.it/wiki/Script
 
 http://github.com/bitcoin/bitcoin/blob/master/src/script/interpreter.cpp
 
-stack carrying data + opcodes w/ effects
+stack based, carries data + opcodes w/ effects
 
 To join in with the fun, download and install kallewoof's btcdeb:
 
@@ -110,11 +108,11 @@ OP_EQUALVERIFY OP_CHECKSIG
 See the 00 consumed by IF causes the _second_ half to be active.
 
 ./btcdeb "[ OP_IF
-   OP_HASH160 0x1436e11d89e9138321fe57037752f0f5b33543735c OP_EQUALVERIFY 
-   OP_DUP OP_HASH160 0x14e1bcdc6e4ea443d08d7c912d54f0bcc760638e78
+   OP_HASH160 0x36e11d89e9138321fe57037752f0f5b33543735c OP_EQUALVERIFY 
+   OP_DUP OP_HASH160 0xe1bcdc6e4ea443d08d7c912d54f0bcc760638e78
 OP_ELSE
    0x04919bed5a OP_CHECKLOCKTIMEVERIFY OP_DROP 
-   OP_DUP OP_HASH160 0x14935ba41cd019cf2984bd2b8a15be24c6b82172f4
+   OP_DUP OP_HASH160 0x935ba41cd019cf2984bd2b8a15be24c6b82172f4
 OP_ENDIF
 OP_EQUALVERIFY OP_CHECKSIG
 ]" 031eb5c69ab71574848671de6b1b4094ab9a1e1687d2e5b0aa76208df59f0bd3b5 00
